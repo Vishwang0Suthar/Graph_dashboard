@@ -206,14 +206,17 @@ st.plotly_chart(fig, use_container_width=True, raw=True)
 st.sidebar.header("Cluster Graph Options")
 cols = ['BALANCE_AMT', 'WITHDRAWAL_AMT']
 x = st.sidebar.selectbox('Select x-axis column:', cols)
-ndf=df
+ndf=filtered_df
+y = filtered_df['Account No']
 # Filter the DataFrame based on all years
 ndf['Year'] = pd.to_datetime(ndf['DATE']).dt.year
 years = ndf['Year'].unique().tolist()
 dibi = ndf[ndf['Year'].isin(years)].copy()
 
+
 # Perform clustering on the filtered data
-kmeans = KMeans(n_clusters=5)
+leng = len(filtered_df['Account No'].unique())
+kmeans = KMeans(n_clusters=leng)
 kmeans.fit(dibi[[x]])
 dibi['Cluster'] = kmeans.labels_
 
@@ -221,7 +224,7 @@ dibi['Cluster'] = kmeans.labels_
 cluster_colors = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00AA']
 
 # Create the scatter plot with the custom cluster colors
-fig = px.scatter(dibi, x=x, y='Year', color='Cluster', color_discrete_sequence=cluster_colors, hover_data=['Account No'], title='Cluster Graph')
+fig = px.scatter(dibi, x=x, y=y, color='Cluster', color_discrete_sequence=cluster_colors, hover_data=['Account No'], title='Cluster Graph')
 
 fig.update_layout(height=600, width=800)
 
@@ -231,17 +234,13 @@ fig.update_traces(text=dibi['Account No'])
 # Set y-axis tickformat to display the whole values
 fig.update_yaxes(tickformat=".f")
 
-
-
-
-
 # Display the plot using Streamlit
 st.plotly_chart(fig, use_container_width=True, raw=True)
 
 
 
 
-#funudflow graph
+#funudflow graph bruh
 
 #z-score ad
 def zskorad(data):
