@@ -224,7 +224,7 @@ dibi['Cluster'] = kmeans.labels_
 cluster_colors = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00AA']
 
 # Create the scatter plot with the custom cluster colors
-fig = px.scatter(dibi, x=x, y=y, color='Cluster', color_discrete_sequence=cluster_colors, hover_data=['Account No'], title='Cluster Graph')
+fig = px.scatter(dibi, x=x, y='Year', color='Cluster', color_discrete_sequence=cluster_colors, hover_data=['Account No'], title='Cluster Graph')
 
 fig.update_layout(height=600, width=800)
 
