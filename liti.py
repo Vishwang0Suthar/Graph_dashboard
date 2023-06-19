@@ -228,6 +228,13 @@ fig.update_layout(height=600, width=800)
 # Add hover labels
 fig.update_traces(text=dibi['Account No'])
 
+# Set y-axis tickformat to display the whole values
+fig.update_yaxes(tickformat=".f")
+
+
+
+
+
 # Display the plot using Streamlit
 st.plotly_chart(fig, use_container_width=True, raw=True)
 
