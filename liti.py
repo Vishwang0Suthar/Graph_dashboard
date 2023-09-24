@@ -9,14 +9,14 @@ import locale
 # import mplcursors
 # import plotly.graph_objects as go
 # from adtk.data import validate_series
-from adtk.visualization import plot
-from adtk.detector import *
-# from streamlit.components.v1 import html
-from sklearn.cluster import KMeans
-from sklearn.neighbors import LocalOutlierFactor
-from sklearn.svm import OneClassSVM
-from sklearn.linear_model import SGDClassifier
-from sklearn.preprocessing import StandardScaler
+# from adtk.visualization import plot
+# from adtk.detector import *
+# # from streamlit.components.v1 import html
+# from sklearn.cluster import KMeans
+# from sklearn.neighbors import LocalOutlierFactor
+# from sklearn.svm import OneClassSVM
+# from sklearn.linear_model import SGDClassifier
+# from sklearn.preprocessing import StandardScaler
 
 # set the locale to India
 locale.setlocale(locale.LC_ALL, 'en_IN')
