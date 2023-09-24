@@ -7,7 +7,7 @@ import numpy as np
 import datetime
 import locale
 # import mplcursors
-import plotly.graph_objects as go
+# import plotly.graph_objects as go
 # from adtk.data import validate_series
 from adtk.visualization import plot
 from adtk.detector import *
