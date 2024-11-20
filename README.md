@@ -1,4 +1,3 @@
-```markdown
 # Anomaly Detection Tool with Streamlit
 
 This project is a Python-based application designed to analyze data in `.clsx` file format and provide anomaly detection using various techniques. The application runs locally with **Streamlit**, offering a user-friendly interface for exploring data and visualizing anomalies.
