@@ -1,4 +1,7 @@
 pandas
+numpy
 streamlit
 plotly
-watchdog==6.0.0
+scikit-learn
+adtk
+openpyxl
