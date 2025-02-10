@@ -20,7 +20,7 @@ from sklearn.preprocessing import StandardScaler
 
 # set the locale to India
 locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
-locale.setlocale(locale.LC_NUMERIC, 'en_IN')
+locale.setlocale(locale.LC_NUMERIC, 'en_US.UTF-8')
 
 # read data from the existing excel file
 # read by default 1st sheet of an excel file
