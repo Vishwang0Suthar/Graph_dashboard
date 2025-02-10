@@ -19,7 +19,7 @@ from sklearn.linear_model import SGDClassifier
 from sklearn.preprocessing import StandardScaler
 
 # set the locale to India
-locale.setlocale(locale.LC_ALL, 'en_IN')
+locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
 locale.setlocale(locale.LC_NUMERIC, 'en_IN')
 
 # read data from the existing excel file
