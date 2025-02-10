@@ -119,21 +119,24 @@ st.dataframe(filtered_df)
 
 total_with = int(filtered_df["WITHDRAWAL_AMT"].sum())
 total_dep = int(filtered_df["DEPOSI_AMT"].sum())
-average_bal=int(filtered_df["BALANCE_AMT"].mean())
-left_column,middle_column,right_column   = st.columns(3)
+average_bal = int(filtered_df["BALANCE_AMT"].mean())
+
+left_column, middle_column, right_column = st.columns(3)
+
 with left_column:
     st.subheader("Total money withdrawn")
-    st.subheader(f"{locale.currency(total_with, grouping=True)}")
+    st.subheader(f"₹{total_with:,.2f}")
+
 with middle_column:
     st.subheader("Total money deposited")
-    st.subheader(f"{locale.currency(total_dep, grouping=True)}")
+    st.subheader(f"₹{total_dep:,.2f}")
+
 with right_column:
     st.subheader("Average balance amount")
-    if average_bal>=0:
-        st.subheader(f"{locale.currency(abs(average_bal), grouping=True)}")
-    else:
-        st.subheader(f"- {locale.currency(abs(average_bal), grouping=True)}")
+    st.subheader(f"₹{abs(average_bal):,.2f}" if average_bal >= 0 else f"- ₹{abs(average_bal):,.2f}")
+
 st.markdown("---")
+
 
 #graphical representation
 
